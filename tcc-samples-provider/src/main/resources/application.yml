@@ -4,14 +4,14 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://10.0.12.72:3306/tcc-samples
+    url: jdbc:mysql://127.0.0.1:3306/tcc-samples?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
-    password: 123456
+    password: root
 
 
 dubbo:
   registry:
-    address: zookeeper://10.0.12.74:2181
+    address: zookeeper://127.0.0.1:2181
   protocol:
     id: dubbo
     name: dubbo
@@ -48,7 +48,7 @@ seata:
     vgroup-mapping:
       my_test_tx_group: my_test_tx_group
     grouplist:
-      my_test_tx_group: 10.0.12.74:8091
+      my_test_tx_group: 127.0.0.1:8091
     #enable-degrade: false
     #disable-global-transaction: false
   transport:
