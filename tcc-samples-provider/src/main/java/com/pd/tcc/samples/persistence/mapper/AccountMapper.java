@@ -17,12 +17,12 @@ public interface AccountMapper {
 
 
     @Update("update t_account set balance = balance+frozen,frozen = 0 where uid = #{uid}")
-    void addCommit(int uid);
+    void addCommit(@Param("uid") int uid);
 
     @Update("update t_account set balance = balance-frozen,frozen = 0 where uid = #{uid}")
-    void deductCommit(int uid);
+    void deductCommit(@Param("uid") int uid);
 
-    @Update("UPDATE t_account SET frozen = 0 WHERE uid = #{uid}}")
-    void rollback(int uid);
+    @Update("UPDATE t_account SET frozen = 0 WHERE uid = #{uid}")
+    void rollback(@Param("uid") int uid);
 
 }

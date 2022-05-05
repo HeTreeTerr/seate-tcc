@@ -18,4 +18,5 @@
 **step3**  
 首先启动tcc-samples-provider，再启动tcc-samples-business  
 **step4**   
-todo 开始测试
+测试提交：get 127.0.0.1:8080/tansfer
+测试回滚：get 127.0.0.1:8080/rollback
